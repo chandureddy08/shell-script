@@ -2,7 +2,7 @@
 
 TODAY=$1
 
-if [$TODAY = SUNDAY]
+if [$TODAY = SUNDAY];
 then
     echo "Today is holiday"
 
