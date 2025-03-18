@@ -3,6 +3,7 @@
 TODAY=$1
 
 if[$1 -eq SUNDAY]
+then
     echo "Today is holiday"
 
 else:
