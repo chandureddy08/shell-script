@@ -9,3 +9,21 @@ then
 else
     echo "You are a super user"
 fi
+
+dnf install mysql -y
+
+if [ $? -ne 0 ]
+then
+    echo "Installation of mysql is.... Failed"
+    exit 1
+else
+    echo "Installation of mysql is.... Success"
+fi
+
+dnf install git -y
+
+if [ $? -ne 0 ]
+then
+    echo "Git is already installed"
+else
+    echo "Git installation failed"
