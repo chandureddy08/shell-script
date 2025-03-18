@@ -37,6 +37,7 @@ do
     then
         echo -e "$i is already installed$Y..SKIPPING$N"
     else
-        echo -e "$i is not installed$B...Need to install$N"
+        dnf install $i -y
+        VALIDATE $? "$i is installing"
     fi
 done
