@@ -1,11 +1,13 @@
 #!/bin/bash
 
-TODAY=$1
+NUMBER=$1
 
-if [$TODAY = SUNDAY];
+if [$NUMBER -eq 10]
 then
-    echo "Today is holiday"
-
+    echo "$NUMBER is equal to 10"
+    if [$NUMBER -gt 10]
+    then
+    echo "$NUMBER is greate than 10"
 else
-    echo "Today is working day"
+    echo "$NUMBER is less than 10"
 fi
