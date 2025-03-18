@@ -27,3 +27,4 @@ then
     echo "Git is already installed"
 else
     echo "Git installation failed"
+fi
