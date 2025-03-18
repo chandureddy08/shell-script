@@ -8,6 +8,7 @@ LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
+B="\e[34m"
 N="\e[0m"
 
 VALIDATE(){
@@ -35,5 +36,7 @@ do
     if [ $? -eq 0 ]
     then
         echo -e "$i is already installed$Y..SKIPPING$N"
+    else
+        echo -e "$i is not installed$B...Need to install$N"
     fi
 done
