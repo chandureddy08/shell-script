@@ -25,6 +25,7 @@ dnf install git -y
 if [ $? -ne 0 ]
 then
     echo "Git installation is failed"
+    exit 1
 else
     echo "Git is already installed"
 fi
