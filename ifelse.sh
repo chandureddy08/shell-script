@@ -6,6 +6,6 @@ if[$1 -eq SUNDAY]
 then
     echo "Today is holiday"
 
-else:
+else
     echo "Today is working day"
 fi
