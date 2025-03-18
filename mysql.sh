@@ -41,4 +41,3 @@ systemctl start mysqld
 VALIDATE $? "mysql server is started"
 
 mysql_secure_installation --set-root-pass ExpenseApp@1
-VALIDATE $? "Done with the setup"
