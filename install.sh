@@ -2,9 +2,10 @@
 
 USERID=$(id -u)
 
-if [ $USERID -eq 0 ]
+if [ $USERID -ne 0 ]
 then
-    echo "You are a Super user"
+    echo "You are not a Super user please run with root access"
+    exit 1
 else
-    echo "You are not a super user"
+    echo "You are a super user"
 fi
