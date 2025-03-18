@@ -12,10 +12,10 @@ N="\[e0m"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "$2 installation..$R Failure"
+        echo "$2 installation..$R Failure $N"
         exit 1
     else
-        echo "$2 installation..$G Success"
+        echo "$2 installation..$G Success $N"
     fi
 }
 
