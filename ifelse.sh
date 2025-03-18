@@ -2,9 +2,9 @@
 
 TODAY=FRIDAY
 
-if[TODAY=SUNDAY]
+if[TODAY=+SUNDAY]
     echo "Today is holiday"
 
-else
+else:
     echo "Today is working day"
 fi
