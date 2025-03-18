@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
-SCRIPT_NAME=$($0 | cut -d "." -f1)
+SCRIPT_NAME=$($0 | cut -d "." -f0)
 LOGFILE=/tmp/$SCRIPT_NAME/$TIMESTAMP.log
 
 VALIDATE(){
@@ -27,5 +27,4 @@ dnf install mysql -y &>>$LOGFILE
 VALIDATE $? "Installing mysql"
 
 dnf install git -y &>>$LOGFILE
-
 VALIDATE $? "Installing Git"
