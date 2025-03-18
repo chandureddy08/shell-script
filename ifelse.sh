@@ -1,8 +1,8 @@
 #!/bin/bash
 
-TODAY=$FRIDAY
+TODAY=$1
 
-if[TODAY==SUNDAY]
+if[$1==SUNDAY]
     echo "Today is holiday"
 
 else:
