@@ -40,4 +40,5 @@ VALIDATE $? "mysql is enabled"
 systemctl start mysqld
 VALIDATE $? "mysql server is started"
 
-mysql_secure_installation --set-root-pass ExpenseApp@1
+mysql_secure_installation --set-root-pass ExpenseApp1
+VALIDATE $? "Setting up root password"
