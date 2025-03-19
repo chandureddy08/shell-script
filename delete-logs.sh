@@ -22,5 +22,5 @@ echo "Files to be deleted: $FILES"
 
 for i in {$FILES}
 do
-    rm $i
+    rm -r $i
 done
