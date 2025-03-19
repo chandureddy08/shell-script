@@ -9,7 +9,5 @@ do
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then
         echo "$FOLDER more than $DISK_THRESHOLD, current usage is $USAGE"
-    else
-        echo "Disk usage is $USAGE and Good"
     fi
 done <<<$DISK_USAGE
