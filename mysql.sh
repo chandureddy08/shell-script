@@ -40,5 +40,14 @@ VALIDATE $? "mysql is enabled"
 systemctl start mysqld
 VALIDATE $? "mysql server is started"
 
-mysql_secure_installation --set-root-pass ExpenseApp1
-VALIDATE $? "Setting up root password"
+# mysql_secure_installation --set-root-pass ExpenseApp1
+# VALIDATE $? "Setting up root password"
+
+mysql -h 172.31.39.216 -uroot -pExppenseApp@1 -e "show databases;" &>> $LOGFILE
+if [ $? -ne 0 ]
+then
+    mysql_secure_installation --set-root-pass ExpenseApp1
+    VALIDATE $? "root password setup"
+else
+    echo "root password was set already$Y...SKIPPING$N"
+fi
