@@ -19,3 +19,8 @@ fi
 FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 
 echo "Files to be deleted: $FILES"
+
+for i in {$FILES}
+do
+    rm $i
+done
