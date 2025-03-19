@@ -1,6 +1,10 @@
 #!/bin/bash
 
 set -e
+failure(){
+    echo "Failed at: $lineno: $msg"
+}
+trap 'failure ${LINENO}"$BASH_COMMAND"'ERR
 
 USERID=$(id -u)
 
