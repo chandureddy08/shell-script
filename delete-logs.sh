@@ -8,7 +8,7 @@ Y="\e[33m"
 B="\e[34m"
 N="\e[0m"
 
-if [ -d SOURCE_DIRECTORY ]
+if [ -d $SOURCE_DIRECTORY ]
 then
     echo -e "$G $SOURCE_DIRECTORY is existing$N"
 else
