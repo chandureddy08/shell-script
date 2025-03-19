@@ -1,5 +1,5 @@
 DISK_USAGE=$(df -hT | grep efx )
-DISK_THRESHOLD=5
+DISK_THRESHOLD=2
 
 
 while IFS= read -r line
