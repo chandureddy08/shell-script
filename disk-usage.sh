@@ -1,5 +1,5 @@
 DISK_USAGE=$(df -hT | grep efx )
-DISK_THRESHOLD=2
+DISK_THRESHOLD=6
 
 
 while IFS= read -r line
@@ -10,4 +10,4 @@ do
     then
         echo "$FOLDER more than $DISK_THRESHOLD, current usage is $USAGE"
     fi
-done <<<$DISK_USAGE
+done <<< $DISK_USAGE
