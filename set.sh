@@ -1,11 +1,12 @@
 #!/bin/bash
 
 set -e
-failure(){
-    echo "Failed at: $1: $2"
+
+handle_error(){
+    echo "Error occured at line number: $1, error command: $2"
 }
 
-trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
+trap 'handle_error ${LINENO} "$BASH_COMMAND"' ERR
 
 USERID=$(id -u)
 
